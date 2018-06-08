@@ -1,18 +1,34 @@
 <template>
-    <v-layout row wrap>
-        <v-flex xs3>
-            <v-subheader>Where do you want to go to school?</v-subheader>
-        </v-flex>
-        <v-flex xs3>
-            <v-select
-                :items="schools"
-                label="Select"
-                single-line
-                autocomplete="true"
-            ></v-select>
-        </v-flex>
-        <v-flex xs6></v-flex>
-    </v-layout>
+    <v-container fluid>
+        <v-layout row wrap>
+            <v-flex xs3>
+                <v-subheader>Where do you want to go to school?</v-subheader>
+            </v-flex>
+            <v-flex xs3>
+                <v-select
+                    :items="schools"
+                    label="Select"
+                    single-line
+                    autocomplete="true"
+                ></v-select>
+            </v-flex>
+            <v-flex xs6></v-flex>
+        </v-layout>
+        <v-layout row wrap>
+            <v-flex xs3>
+                <v-subheader>What do you want to study?</v-subheader>
+            </v-flex>
+            <v-flex xs3>
+                <v-select
+                    :items="studies"
+                    label="Select"
+                    single-line
+                    autocomplete="true"
+                ></v-select>
+            </v-flex>
+            <v-flex xs6></v-flex>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>
@@ -34,6 +50,18 @@ export default {
         'Eagle Gate College Salt Lake City',
         'Fortis College Salt Lake City',
         'Independence University',
+      ],
+      studies: [
+        'Business',
+        'History',
+        'Arts',
+        'Physics',
+        'Bio Chemistry',
+        'Law',
+        'Finance',
+        'Economics',
+        'Information Science',
+        'Computer Science',
       ],
     };
   },
