@@ -28,6 +28,23 @@
             </v-flex>
             <v-flex xs6></v-flex>
         </v-layout>
+        <v-layout row wrap>
+            <v-flex xs6>
+                <v-data-table
+                    :headers="headers"
+                    :items="occupations"
+                    hide-actions
+                    class="elevation-1"
+                >
+                    <template slot="items" slot-scope="props">
+                    <td>{{ props.item.name }}</td>
+                    <td class="text-xs-right">{{ props.item.salary }}</td>
+                    <td class="text-xs-right">{{ props.item.employment }}</td>
+                    </template>
+                </v-data-table>
+            </v-flex>
+            <v-flex xs6></v-flex>
+        </v-layout>
     </v-container>
 </template>
 
@@ -62,6 +79,37 @@ export default {
         'Economics',
         'Information Science',
         'Computer Science',
+      ],
+      headers: [
+        { text: 'Occupation', value: 'occupation' },
+        { text: 'Salary', value: 'salary' },
+        { text: 'Employment', value: 'employment' },
+      ],
+      occupations: [
+        {
+          value: false,
+          name: 'Accountant',
+          salary: '$60,000',
+          employment: '10%',
+        },
+        {
+          value: false,
+          name: 'Advertising Manager',
+          salary: '$50,000',
+          employment: '20%',
+        },
+        {
+          value: false,
+          name: 'Architect',
+          salary: '$75,000',
+          employment: '5%',
+        },
+        {
+          value: false,
+          name: 'Baker',
+          salary: '$40,000',
+          employment: '2%',
+        },
       ],
     };
   },
