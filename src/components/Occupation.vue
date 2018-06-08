@@ -9,7 +9,7 @@
                     :items="schools"
                     label="Select"
                     single-line
-                    autocomplete="true"
+                    autocomplete
                 ></v-select>
             </v-flex>
             <v-flex xs6></v-flex>
@@ -23,7 +23,7 @@
                     :items="studies"
                     label="Select"
                     single-line
-                    autocomplete="true"
+                    autocomplete
                 ></v-select>
             </v-flex>
             <v-flex xs6></v-flex>
